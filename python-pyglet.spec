@@ -13,7 +13,7 @@ Group: Development/Python
 Url: http://pyglet.org
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires: python >= 2.5
-Requires: libmesagl1, libmesaglu1
+Requires: libmesagl, libmesaglu
 BuildRequires: python-devel >= 2.5
 BuildArch: noarch
 
