@@ -1,21 +1,21 @@
 %define module  pyglet
 %define name 	python-%{module}
-%define version 1.1.2
-%define release %mkrel 2
+%define version 1.1.3
+%define release %mkrel 1
 
-Summary: A cross-platform windowing and multimedia library for Python
-Name: 	 %{name}
-Version: %{version}
-Release: %{release}
-Source0: %{module}-%{version}.tar.lzma
-License: BSD
-Group: 	 Development/Python
-Url: 	 http://pyglet.org
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Requires: python >= 2.5
-Requires: libmesagl, libmesaglu, gdk-pixbuf
-BuildRequires: python-devel >= 2.5
-BuildArch: noarch
+Summary:	A cross-platform windowing and multimedia library for Python
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+Source0:	%{module}-%{version}.tar.gz
+License:	BSD
+Group:		Development/Python
+Url:		http://pyglet.org
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Requires:	python >= 2.5
+Requires:	libmesagl, libmesaglu, gdk-pixbuf
+BuildRequires:	python-devel >= 2.5
+BuildArch:	noarch
 
 %description
 Pyglet provides an object-oriented programming interface for
