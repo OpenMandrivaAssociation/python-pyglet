@@ -49,7 +49,7 @@ rm -rf %{buildroot}
 %clean
 rm -rf %{buildroot}
 
-%files -f FILELIST
+%files
 %defattr(-,root,root)
 %doc README LICENSE CHANGELOG NOTICE examples/ doc/html/
-
+%py_puresitedir/*
