@@ -53,3 +53,41 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README LICENSE CHANGELOG NOTICE examples/ doc/html/
 %py_puresitedir/*
+
+
+%changelog
+* Wed Nov 17 2010 Funda Wang <fwang@mandriva.org> 1.1.4-1mdv2011.0
++ Revision: 598280
+- rebuild for py2.7
+
+* Thu Jan 07 2010 Lev Givon <lev@mandriva.org> 1.1.4-1mdv2010.1
++ Revision: 487371
+- Update to 1.1.4.
+
+* Tue Sep 15 2009 Thierry Vignaud <tv@mandriva.org> 1.1.3-2mdv2010.0
++ Revision: 442418
+- rebuild
+
+  + Lev Givon <lev@mandriva.org>
+    - Update to 1.1.3.
+
+* Sat Jan 03 2009 Funda Wang <fwang@mandriva.org> 1.1.2-2mdv2009.1
++ Revision: 323951
+- rebuild
+
+* Fri Oct 24 2008 Lev Givon <lev@mandriva.org> 1.1.2-1mdv2009.1
++ Revision: 296980
+- Update to 1.1.2.
+
+* Tue Aug 05 2008 Lev Givon <lev@mandriva.org> 1.1-1mdv2009.0
++ Revision: 263985
+- Update to 1.1.
+
+* Fri May 09 2008 Lev Givon <lev@mandriva.org> 1.0-1mdv2009.0
++ Revision: 205341
+- import python-pyglet
+
+
+* Fri May 9 2008 Lev Givon <lev@mandriva.org> 1.0-1mdv2008.1
+- Package for Mandriva.
+
