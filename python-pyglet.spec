@@ -1,7 +1,7 @@
 %define module  pyglet
 %define name 	python-%{module}
 %define version 1.1.4
-%define release %mkrel 1
+%define release 2
 
 Summary:	A cross-platform windowing and multimedia library for Python
 Name:		%{name}
