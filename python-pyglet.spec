@@ -1,17 +1,13 @@
 %define module  pyglet
-%define name 	python-%{module}
-%define version 1.1.4
-%define release 2
 
 Summary:	A cross-platform windowing and multimedia library for Python
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Source0:	%{module}-%{version}.tar.gz
+Name:		python-%{module}
+Version:	1.5.27
+Release:	1
+Source0:	https://files.pythonhosted.org/packages/source/p/pyglet/%{module}-%{version}.zip
 License:	BSD
 Group:		Development/Python
 Url:		http://pyglet.org
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	python >= 2.5
 Requires:	libmesagl, libmesaglu, gdk-pixbuf
 BuildRequires:	python-devel >= 2.5
@@ -37,57 +33,14 @@ OS X and Linux. Some of the features of pyglet are:
   WMV and Xvid.
 
 %prep
-%setup -q -n %{module}-%{version}
+%autosetup -p1 -n %{module}-%{version}
 
 %build
-%__python setup.py build
+python setup.py build
 
 %install
-rm -rf %{buildroot}
-%__python setup.py install --root=%{buildroot} --record=FILELIST
-
-%clean
-rm -rf %{buildroot}
+python setup.py install --root %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc README LICENSE CHANGELOG NOTICE examples/ doc/html/
 %py_puresitedir/*
-
-
-%changelog
-* Wed Nov 17 2010 Funda Wang <fwang@mandriva.org> 1.1.4-1mdv2011.0
-+ Revision: 598280
-- rebuild for py2.7
-
-* Thu Jan 07 2010 Lev Givon <lev@mandriva.org> 1.1.4-1mdv2010.1
-+ Revision: 487371
-- Update to 1.1.4.
-
-* Tue Sep 15 2009 Thierry Vignaud <tv@mandriva.org> 1.1.3-2mdv2010.0
-+ Revision: 442418
-- rebuild
-
-  + Lev Givon <lev@mandriva.org>
-    - Update to 1.1.3.
-
-* Sat Jan 03 2009 Funda Wang <fwang@mandriva.org> 1.1.2-2mdv2009.1
-+ Revision: 323951
-- rebuild
-
-* Fri Oct 24 2008 Lev Givon <lev@mandriva.org> 1.1.2-1mdv2009.1
-+ Revision: 296980
-- Update to 1.1.2.
-
-* Tue Aug 05 2008 Lev Givon <lev@mandriva.org> 1.1-1mdv2009.0
-+ Revision: 263985
-- Update to 1.1.
-
-* Fri May 09 2008 Lev Givon <lev@mandriva.org> 1.0-1mdv2009.0
-+ Revision: 205341
-- import python-pyglet
-
-
-* Fri May 9 2008 Lev Givon <lev@mandriva.org> 1.0-1mdv2008.1
-- Package for Mandriva.
-
