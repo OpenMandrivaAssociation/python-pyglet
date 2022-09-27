@@ -8,9 +8,9 @@ Source0:	https://files.pythonhosted.org/packages/source/p/pyglet/%{module}-%{ver
 License:	BSD
 Group:		Development/Python
 Url:		http://pyglet.org
-Requires:	python >= 2.5
-Requires:	libmesagl, libmesaglu, gdk-pixbuf
-BuildRequires:	python-devel >= 2.5
+Requires:	python
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(setuptools)
 BuildArch:	noarch
 
 %description
