@@ -2,7 +2,7 @@
 
 Summary:	A cross-platform windowing and multimedia library for Python
 Name:		python-%{module}
-Version:	2.0.9
+Version:	2.0.10
 Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/p/pyglet/%{module}-%{version}.zip
 License:	BSD
