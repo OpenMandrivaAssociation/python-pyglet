@@ -7,7 +7,7 @@ Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/p/pyglet/%{module}-%{version}.zip
 License:	BSD
 Group:		Development/Python
-Url:		http://pyglet.org
+Url:		https://pyglet.org
 Requires:	python
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(setuptools)
