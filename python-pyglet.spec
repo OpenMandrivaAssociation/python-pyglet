@@ -4,13 +4,14 @@ Summary:	A cross-platform windowing and multimedia library for Python
 Name:		python-%{module}
 Version:	2.1.19
 Release:	1
-Source0:	https://files.pythonhosted.org/packages/source/p/pyglet/%{module}-%{version}.zip
+Source0:	https://files.pythonhosted.org/packages/source/p/pyglet/%{module}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		https://pyglet.org
 Requires:	python
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(flit-core)
+BuildRequires:	python%{pyver}dist(pip)
 BuildArch:	noarch
 
 %description
@@ -36,10 +37,10 @@ OS X and Linux. Some of the features of pyglet are:
 %autosetup -p1 -n %{module}-%{version}
 
 %build
-python setup.py build
+%py_build
 
 %install
-python setup.py install --root %{buildroot}
+%py_install
 
 %files
 %defattr(-,root,root)
